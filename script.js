@@ -3,58 +3,37 @@ const products = [
     {
         id: 1,
         name: "Classic White Tee",
-        price: "$45",
+        price: "$39.00",
         category: "tops",
-        image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2080&q=80"
+        image: "assets/Shirt1.png"
     },
     {
         id: 2,
-        name: "Slim Fit Jeans",
-        price: "$89",
-        category: "bottoms",
-        image: "https://images.unsplash.com/photo-1542272604-787c3835535d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2026&q=80"
+        name: "Minimalist Black Tee",
+        price: "$39.00",
+        category: "tops",
+        image: "assets/Shirt2.png"
     },
     {
         id: 3,
-        name: "Summer Dress",
-        price: "$120",
-        category: "dresses",
-        image: "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2028&q=80"
+        name: "Urban Grey Tee",
+        price: "$39.00",
+        category: "tops",
+        image: "assets/Shirt3.png"
     },
     {
         id: 4,
-        name: "Leather Jacket",
-        price: "$299",
-        category: "outerwear",
-        image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2035&q=80"
+        name: "Retro Blue Tee",
+        price: "$39.00",
+        category: "tops",
+        image: "assets/Shirt4.png"
     },
     {
         id: 5,
-        name: "Oversized Sweater",
-        price: "$75",
+        name: "Street Style Tee",
+        price: "$39.00",
         category: "tops",
-        image: "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2055&q=80"
-    },
-    {
-        id: 6,
-        name: "High-Waist Pants",
-        price: "$95",
-        category: "bottoms",
-        image: "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-    },
-    {
-        id: 7,
-        name: "Evening Gown",
-        price: "$450",
-        category: "dresses",
-        image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2025&q=80"
-    },
-    {
-        id: 8,
-        name: "Wool Coat",
-        price: "$380",
-        category: "outerwear",
-        image: "https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+        image: "assets/Shirt5.png"
     }
 ];
 
