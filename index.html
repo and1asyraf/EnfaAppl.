@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EiOC - Modern Apparel Brand</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="#home">enfa</a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#shop">SHOP</a></li>
+                    <li><a href="#collections">COLLECTIONS</a></li>
+                    <li><a href="#brand">BRAND</a></li>
+                    <li><a href="#looks">LOOKS</a></li>
+                    <li><a href="#about">ABOUT US</a></li>
+                    <li><a href="#blog">BLOG</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="search-btn" id="searchBtn" title="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="cart-btn" id="cartBtn" title="Cart">
+                    <i class="fas fa-shopping-bag"></i>
+                </button>
+                <button class="contact-btn" id="contactBtn" title="Contact">
+                    <i class="fas fa-envelope"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="searchModal">
+        <div class="search-content">
+            <input type="text" placeholder="Search products..." id="searchInput">
+                            <button class="close-search" id="closeSearch" title="Close search">
+                    <i class="fas fa-times"></i>
+                </button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">NEW ARRIVALS</h1>
+                <p class="hero-subtitle">Discover the latest collection</p>
+                <button class="cta-button" onclick="scrollToSection('shop')">SHOP NOW</button>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="EiOC Collection">
+            </div>
+        </section>
+
+        <!-- Featured Collections -->
+        <section id="collections" class="collections">
+            <div class="container">
+                <h2 class="section-title">FEATURED COLLECTIONS</h2>
+                <div class="collections-grid">
+                    <div class="collection-card">
+                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Summer Collection">
+                        <div class="collection-info">
+                            <h3>SUMMER ESSENTIALS</h3>
+                            <p>Lightweight pieces for warm days</p>
+                        </div>
+                    </div>
+                    <div class="collection-card">
+                        <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" alt="Winter Collection">
+                        <div class="collection-info">
+                            <h3>WINTER WARDROBE</h3>
+                            <p>Cozy and sophisticated layers</p>
+                        </div>
+                    </div>
+                    <div class="collection-card">
+                        <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Accessories">
+                        <div class="collection-info">
+                            <h3>ACCESSORIES</h3>
+                            <p>Complete your look</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shop Section -->
+        <section id="shop" class="shop">
+            <div class="container">
+                <h2 class="section-title">SHOP</h2>
+                <div class="shop-filters">
+                    <input type="text" placeholder="Search products..." id="productSearch" class="product-search">
+                    <select id="categoryFilter" class="category-filter" title="Filter by category">
+                        <option value="">All Categories</option>
+                        <option value="tops">Tops</option>
+                        <option value="bottoms">Bottoms</option>
+                        <option value="dresses">Dresses</option>
+                        <option value="outerwear">Outerwear</option>
+                    </select>
+                </div>
+                <div class="products-grid" id="productsGrid">
+                    <!-- Products will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Brand Section -->
+        <section id="brand" class="brand">
+            <div class="container">
+                <div class="brand-content">
+                    <div class="brand-text">
+                        <h2 class="section-title">ABOUT EIOC</h2>
+                        <p>EiOC is a modern apparel brand that combines minimalist design with sophisticated style. Our collections are crafted for individuals who appreciate quality, comfort, and timeless elegance.</p>
+                        <p>We believe in creating pieces that transcend seasons and trends, focusing on sustainable practices and exceptional craftsmanship.</p>
+                        <button class="learn-more-btn" onclick="scrollToSection('about')">LEARN MORE</button>
+                    </div>
+                    <div class="brand-image">
+                        <img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="EiOC Brand">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Looks Section -->
+        <section id="looks" class="looks">
+            <div class="container">
+                <h2 class="section-title">LOOKS</h2>
+                <div class="looks-gallery">
+                    <div class="look-item">
+                        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Look 1">
+                        <div class="look-overlay">
+                            <h3>CASUAL ELEGANCE</h3>
+                        </div>
+                    </div>
+                    <div class="look-item">
+                        <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Look 2">
+                        <div class="look-overlay">
+                            <h3>URBAN SOPHISTICATION</h3>
+                        </div>
+                    </div>
+                    <div class="look-item">
+                        <img src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Look 3">
+                        <div class="look-overlay">
+                            <h3>MINIMALIST CHARM</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">ABOUT US</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>OUR STORY</h3>
+                        <p>Founded with a vision to create timeless, high-quality apparel, EiOC has been at the forefront of minimalist fashion since our inception. We believe that true style is effortless and enduring.</p>
+                        
+                        <h3>OUR MISSION</h3>
+                        <p>To provide our customers with thoughtfully designed, sustainable clothing that enhances their daily lives while maintaining the highest standards of quality and craftsmanship.</p>
+                        
+                        <h3>SUSTAINABILITY</h3>
+                        <p>We are committed to sustainable practices throughout our production process, from sourcing eco-friendly materials to implementing ethical manufacturing standards.</p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h4>5+</h4>
+                            <p>Years of Excellence</p>
+                        </div>
+                        <div class="stat">
+                            <h4>100%</h4>
+                            <p>Sustainable Materials</p>
+                        </div>
+                        <div class="stat">
+                            <h4>50K+</h4>
+                            <p>Happy Customers</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="blog">
+            <div class="container">
+                <h2 class="section-title">BLOG</h2>
+                <div class="blog-grid">
+                    <article class="blog-post">
+                        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Blog Post 1">
+                        <div class="blog-content">
+                            <h3>Spring Style Guide 2024</h3>
+                            <p>Discover the latest trends and how to incorporate them into your wardrobe...</p>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </article>
+                    <article class="blog-post">
+                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Blog Post 2">
+                        <div class="blog-content">
+                            <h3>Sustainable Fashion Tips</h3>
+                            <p>Learn how to build a sustainable wardrobe that lasts...</p>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </article>
+                    <article class="blog-post">
+                        <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" alt="Blog Post 3">
+                        <div class="blog-content">
+                            <h3>Capsule Wardrobe Essentials</h3>
+                            <p>Build a versatile wardrobe with these essential pieces...</p>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Purchase Modal -->
+    <div class="purchase-modal" id="purchaseModal">
+        <div class="modal-content">
+                            <button class="close-modal" id="closeModal" title="Close modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            <h3>Complete Your Purchase</h3>
+            <div class="form-container">
+                <iframe src="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>EiOC</h4>
+                    <p>Modern apparel for the sophisticated individual.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#shop">Shop</a></li>
+                        <li><a href="#collections">Collections</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#" id="contactLink">Contact Us</a></li>
+                        <li><a href="#" id="sizeGuideLink">Size Guide</a></li>
+                        <li><a href="#" id="returnsLink">Returns Policy</a></li>
+                        <li><a href="#" id="shippingLink">Shipping Info</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe for updates and exclusive offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 EiOC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
